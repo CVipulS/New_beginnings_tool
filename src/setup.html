@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Theme and Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+</head>
+<body>
+    <h1>Setup Your Theme and Categorywise Agenda Points</h1>
+    
+    <form id="setup-form">
+        <h2><label for="theme">Agenda Theme:</label></h2>
+        <input type="text" name="theme" id="theme" required>
+        
+        <h2><label for="category">Category</label></h2>
+        <select id="category" name="category">
+            <option value="Studying">Studying</option>
+            <option value="Habituation">Habituation</option>
+            <option value="LibreSource">Libre Source</option>
+            <option value="Offering">Offering</option>
+            <option value="Reporting">Reporting</option>
+            <option value="Creativity">Creativity</option>
+        </select>
+        <h3 id="category-description"></h3>
+        <h2>Agenda Points</h2>
+        <label>Point 1: <input type="text" name="point1" required></label>
+        <label>Point 2: <input type="text" name="point2"></label>
+        <label>Point 3: <input type="text" name="point3"></label>
+        <br /><button type="submit">Save</button>
+    </form>
+    <h2>Suggestion from <a href="https://github.com/marketplace/models/azureml/Phi-4" target="_blank">Microsoft Phi-4</a></h2>
+    <h3>Assumption: theme is given and agenda category is selected.</h3>
+    <form id="ai-suggestion-form">
+        <label>GitHub Models PAT for bearer authentication (not stored): <input type="password" name="GitHubToken" required /></label>
+        <section id="suggested"></section>
+        <button type="submit">Suggest</button>
+    </form>
+    <a href="home.html">Return to Home Page</a>
+    <script src="setup.js"></script>
+</body>
+</html>
